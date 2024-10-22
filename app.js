@@ -11,11 +11,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Hello express!");
-});
-
-app.get("/search", async (req, res) => {
+app.get("/", async (req, res) => {
   const search = req.query.q;
   const offset = req.query.offset;
 
